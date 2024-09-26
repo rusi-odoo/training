@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="product_template_extention_view" model="ir.ui.view">
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <field name="uom_po_id" position='after'>
+                <field name="product_status_id" />
+                <field name="hs_code" />
+            </field>
+            <field name="default_code" position='after'>
+                <field name="customer_product_code" />
+            </field>
+            <xpath expr="//field[@name='categ_id']" position="before">
+                <field name="landing_cost" widget="monetary"/>
+                <field name="margin" widget='percentage'/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

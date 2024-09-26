@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_product_status_tree" model="ir.ui.view">
+        <field name="name">view.product.status.tree</field>
+        <field name="model">product.status</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="hierarchy"/>
+                <field name="change_up_group_id"/>
+                <field name="change_down_group_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="product_status_action" model="ir.actions.act_window">
+        <field name="name">Product Status</field>
+        <field name="res_model">product.status</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_product_status" name="Product status" action="product_status_action" parent="stock.menu_product_in_config_stock" sequence="4"/>
+
+</odoo>

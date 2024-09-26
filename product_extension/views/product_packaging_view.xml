@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="product_packaging_extention_view" model="ir.ui.view">
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position='after'>
+                <field name="case_width" />
+                <field name="case_length" />
+                <field name="case_height" />
+                <field name="case_net_weight" />
+                <field name="case_gross_weight" />
+                <field name="case_volume" />
+            </xpath>
+        </field>
+    </record>
+    <record id="product_packaginf_extention_view_tree" model="ir.ui.view">
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position='after'>
+                <field name="case_width" />
+                <field name="case_length" />
+                <field name="case_height" />
+                <field name="case_net_weight" />
+                <field name="case_gross_weight" />
+                <field name="case_volume" />
+            </field>
+        </field>
+    </record>
+</odoo>

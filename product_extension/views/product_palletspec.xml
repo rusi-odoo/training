@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_product_palletspec_tree" model="ir.ui.view">
+        <field name="name">product.product_palletspec_tree_view</field>
+        <field name="model">product.palletspec</field>
+        <field name="arch" type="xml">
+            <tree string="Pallet Specification" editable='top'>
+                <field name="product_tmpl_id" />
+                <field name="name" />
+                <field name="cases_per_layer" />
+                <field name="layers_per_pallet" />
+                <field name="pallet_quantity"  />
+                <field name="pallet_width" />
+                <field name="pallet_length" />
+                <field name="pallet_height" />
+                <field name="pallet_weight" />
+                <field name="pallet_volume" />
+                <field name="pcs_per_pallet" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Add Pallet Spec to Product View (Inventory tab) -->
+    <record id="view_product_template_only_form_palletspec" model="ir.ui.view">
+        <field name="name">product.template.only.form.palletspec</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <page name="inventory" position="inside">
+                <group name="pallet_specification" string="Pallet Specification" colspan="4">
+                    <field colspan="2" name="palletspec_ids" nolabel="1">
+                        <tree string="Product Specifications" name="packaging_Specifications" editable="bottom"></tree>
+                    </field>
+                </group>
+            </page>
+        </field>
+    </record>
+
+
+    <!-- Action for the Pallet Specification List View -->
+    <record id="action_pallet_spec" model="ir.actions.act_window">
+        <field name="name">Pallet Specification</field>
+        <field name="res_model">product.palletspec</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_pallet_spec" name="Pallet Specification"
+        parent="stock.menu_product_in_config_stock" action="action_pallet_spec" />
+
+</odoo>

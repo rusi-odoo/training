@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_vendor_status,access_vendor_status,model_vendor_status,base.group_user,1,1,1,1
+access_certification_user,certification.user,model_certification,,1,1,1,1
+access_gfsi_scheme_user,gfsi.scheme.user,model_gfsi_scheme,,1,1,1,1
+access_gfsi_grade_user,gfsi.grade.user,model_gfsi_grade,,1,1,1,1

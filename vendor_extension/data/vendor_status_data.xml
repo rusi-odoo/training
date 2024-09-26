@@ -1,0 +1,73 @@
+<odoo>
+    <!-- Vendor Status: Prospective -->
+    <record id="vendor_status_prospective" model="vendor.status">
+        <field name="name">Prospective</field>
+        <field name="hierarchy">1</field>
+        <field name="change_user_ids" eval="[(6, 0, [ref('base.user_admin'), ref('base.user_demo'),ref('base.demo_user0')])]"/>
+        <field name="prevent_po">yes</field>
+    </record>
+
+    <!-- Vendor Status: Evaluation -->
+    <record id="vendor_status_evaluation" model="vendor.status">
+        <field name="name">Evaluation</field>
+        <field name="hierarchy">2</field>
+        <field name="change_user_ids" eval="[(6, 0, [ref('base.demo_user0'), ref('base.user_demo')])]"/>
+        <field name="prevent_po">yes</field>
+        
+    </record>
+
+    <!-- Vendor Status: Rejected -->
+    <record id="vendor_status_rejected" model="vendor.status">
+        <field name="name">Rejected</field>
+        <field name="hierarchy">2</field>
+        <field name="change_user_ids" eval="[(6, 0, [
+        ref('base.user_admin')])]"/>
+        <field name="prevent_po">yes</field>
+        
+    </record>
+
+    <!-- Vendor Status: Verified - Grade 2 -->
+    <record id="vendor_status_verified_grade_2" model="vendor.status">
+        <field name="name">Verified - Grade 2</field>
+        <field name="hierarchy">3</field>
+        <field name="change_user_ids" eval="[(6, 0, [ref('base.demo_user0'),ref('base.user_admin')])]"/>
+        <field name="prevent_po">no</field>
+        
+    </record>
+
+    <!-- Vendor Status: Verified - Grade 1 -->
+    <record id="vendor_status_verified_grade_1" model="vendor.status">
+        <field name="name">Verified - Grade 1</field>
+        <field name="hierarchy">3</field>
+        <field name="change_user_ids" eval="[(6, 0, [ref('base.demo_user0')])]"/>
+        <field name="prevent_po">no</field>
+        
+    </record>
+
+    <!-- Vendor Status: Active -->
+    <record id="vendor_status_active" model="vendor.status">
+        <field name="name">Active</field>
+        <field name="hierarchy">4</field>
+        <field name="change_user_ids" eval="False"/>
+        <field name="prevent_po">no</field>
+        
+    </record>
+
+    <!-- Vendor Status: Active - On Hold -->
+    <record id="vendor_status_active_on_hold" model="vendor.status">
+        <field name="name">Active - On Hold</field>
+        <field name="hierarchy">4</field>
+        <field name="change_user_ids" eval="[(6, 0, [ref('base.demo_user0'), ref('base.user_demo'), ref('base.user_admin')])]"/>
+        <field name="prevent_po">alert</field>
+        
+    </record>
+
+    <!-- Vendor Status: Disqualified -->
+    <record id="vendor_status_disqualified" model="vendor.status">
+        <field name="name">Disqualified</field>
+        <field name="hierarchy">5</field>
+        <field name="change_user_ids" eval="[(6, 0, [ref('base.demo_user0')])]"/>
+        <field name="prevent_po">yes</field>
+        
+    </record>
+</odoo>

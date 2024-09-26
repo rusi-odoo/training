@@ -1,0 +1,53 @@
+<odoo>
+    <record id="view_vendor_pricelist_form" model="ir.ui.view">
+        <field name="name">product.supplierinfo.form</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <field name="qty_per_case" />
+                    <field name="cases_per_container" />
+                    <field name="price_per_1000" />
+                    <field name="incoterm_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_vendor_pricelist_tree" model="ir.ui.view">
+        <field name="name">product.supplierinfo.tree</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="qty_per_case" />
+                <field name="cases_per_container" />
+                <field name="price_per_1000" />
+                <field name="incoterm" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_vendor_pricelist_filter" model="ir.ui.view">
+        <field name="name">product.supplierinfo.search</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="product.product_supplierinfo_search_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='active_products']" position="after">
+                <filter string="Active" name="active_status"
+                    domain="[('product_tmpl_id.product_status_id.name', '=','Active')]" />
+                <filter string="Pricing" name="pricing_status"
+                    domain="[('product_tmpl_id.product_status_id.name', '=','Pricing')]" />
+                <filter string="NPD" name="npd_status"
+                    domain="[('product_tmpl_id.product_status_id.name', '=','NPD')]" />
+                <filter string="Dormant" name="dormant_status"
+                    domain="[('product_tmpl_id.product_status_id.name', '=', 'Dormant')]" />
+                <filter string="Archived" name="archived_status"
+                    domain="[('product_tmpl_id.product_status_id.name', '=', 'Archived')]" />
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

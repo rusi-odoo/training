@@ -1,0 +1,56 @@
+<odoo>
+    
+    <record id="view_gfsi_certification_tree" model="ir.ui.view">
+        <field name="name">gfsi.certification.tree</field>
+        <field name="model">certification</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    
+    <record id="view_gfsi_scheme_tree" model="ir.ui.view">
+        <field name="name">gfsi.scheme.tree</field>
+        <field name="model">gfsi.scheme</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_gfsi_grade_tree" model="ir.ui.view">
+        <field name="name">gfsi.grade.tree</field>
+        <field name="model">gfsi.grade</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_gfsi_certification" model="ir.actions.act_window">
+        <field name="name">GFSI Certifications</field>
+        <field name="res_model">certification</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="action_gfsi_scheme" model="ir.actions.act_window">
+        <field name="name">GFSI Schemes</field>
+        <field name="res_model">gfsi.scheme</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="action_gfsi_grade" model="ir.actions.act_window">
+        <field name="name">GFSI grades</field>
+        <field name="res_model">gfsi.grade</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    
+    <menuitem id="menu_gfsi_certification" name="GFSI Certifications" parent="menu_configuration_vendor" action="action_gfsi_certification"/>
+    <menuitem id="menu_gfsi_grade" name="GFSI Grade" parent="menu_configuration_vendor" action="action_gfsi_grade"/>
+    <menuitem id="menu_gfsi_scheme" name="GFSI Schemes" parent="menu_configuration_vendor" action="action_gfsi_scheme"/>
+</odoo>

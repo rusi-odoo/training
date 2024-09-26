@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_vendor_status_tree" model="ir.ui.view">
+        <field name="name">view.vendor.status.tree</field>
+        <field name="model">vendor.status</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="hierarchy"/>
+                <field name="change_user_ids" widget='many2many_tags'/>
+                <field name="prevent_po" decoration-danger="prevent_po == 'yes'" decoration-success="prevent_po == 'no'" decoration-primary="prevent_po == 'alert'" widget='badge' />
+                <field name="notify_user_id"/>
+            </tree>
+        </field>
+    </record>
+    <record id="vendor_status_action" model="ir.actions.act_window">
+        <field name="name">Vendor Status</field>
+        <field name="res_model">vendor.status</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_configuration_vendor" name="Vendor" parent="purchase.menu_purchase_config"/>
+    <menuitem id="menu_vendor_status" name="Vendor Status" parent="menu_configuration_vendor" action="vendor_status_action"/>
+</odoo>

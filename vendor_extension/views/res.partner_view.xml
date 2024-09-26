@@ -1,0 +1,36 @@
+<odoo>
+    <record id="view_res_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="vendor_status_id" />
+            </field>
+            <xpath expr="//notebook" position="inside">
+                <page string="Product Categories" name="product_categories">
+                    <field name="category_id" widget="many2many_tags"/>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='product_categories']" position="after">
+                <page name='compliance' string="Compliance">
+                    <group>
+                        <group>
+                            <field name="sedex_registered" />
+                            <field name="ethical_audit" />
+                            <field name="gfsi_certification" />
+                            <field name="fsc_certified" />
+                            <field name="pefc_certified"/>
+                            <field name="certification_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="sedex_no" invisible="sedex_registered != 'yes'" required="sedex_registered == 'yes'"/>
+                            <field name="gfsi_scheme_id" invisible="gfsi_certification != 'yes'" required="gfsi_certification == 'yes'"/>
+                            <field name="gfsi_grade_id" invisible="gfsi_certification != 'yes'" required="gfsi_certification == 'yes'"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

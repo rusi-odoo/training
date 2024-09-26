@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- GFSI Schemes -->
+        <record id="gfsi_scheme_brcgs" model="gfsi.scheme">
+            <field name="name">BRCGS</field>
+        </record>
+        <record id="gfsi_scheme_sqf" model="gfsi.scheme">
+            <field name="name">SQF</field>
+        </record>
+        <record id="gfsi_scheme_ifs" model="gfsi.scheme">
+            <field name="name">IFS</field>
+        </record>
+        <record id="gfsi_scheme_fssc_22000" model="gfsi.scheme">
+            <field name="name">FSSC 22000</field>
+        </record>
+
+        <!-- GFSI Grades -->
+        <record id="gfsi_grade_aa_plus" model="gfsi.grade">
+            <field name="name">AA+</field>
+        </record>
+        <record id="gfsi_grade_aa" model="gfsi.grade">
+            <field name="name">AA</field>
+        </record>
+        <record id="gfsi_grade_a_plus" model="gfsi.grade">
+            <field name="name">A+</field>
+        </record>
+        <record id="gfsi_grade_b_plus" model="gfsi.grade">
+            <field name="name">B+</field>
+        </record>
+        <record id="gfsi_grade_b" model="gfsi.grade">
+            <field name="name">B</field>
+        </record>
+        <record id="gfsi_grade_c_plus" model="gfsi.grade">
+            <field name="name">C+</field>
+        </record>
+        <record id="gfsi_grade_c" model="gfsi.grade">
+            <field name="name">C</field>
+        </record>
+        <record id="gfsi_grade_other" model="gfsi.grade">
+            <field name="name">Other</field>
+        </record>
+        <record id="gfsi_grade_unknown" model="gfsi.grade">
+            <field name="name">Unknown</field>
+        </record>
+
+        <!-- Certifications -->
+        <record id="certification_iso_9001" model="certification">
+            <field name="name">ISO 9001:2015</field>
+        </record>
+        <record id="certification_iso_14001" model="certification">
+            <field name="name">ISO 14001:2015</field>
+        </record>
+        <record id="certification_iso_22000" model="certification">
+            <field name="name">ISO 22000:2018</field>
+        </record>
+        <record id="certification_fssc_24000" model="certification">
+            <field name="name">FSSC 24000</field>
+        </record>
+        <record id="certification_other" model="certification">
+            <field name="name">Other</field>
+        </record>
+        <record id="certification_unverified" model="certification">
+            <field name="name">Unverified</field>
+        </record>
+    </data>
+</odoo>
