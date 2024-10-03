@@ -5,21 +5,21 @@ class ProductPalletSpec(models.Model):
     _name = 'product.palletspec'
     _description = 'Product Pallet Specification'
 
-    product_tmpl_id = fields.Many2one('product.template', string="Product", required=True)
+    product_tmpl_id = fields.Many2one('product.template', string="Product")
 
     name = fields.Char(string="Pallet Type", required=True)
-    cases_per_layer = fields.Float(string="Cases/Layer", required=True)
-    layers_per_pallet = fields.Float(string="Layers/Pallet", required=True)
+    cases_per_layer = fields.Float(string="Cases/Layer")
+    layers_per_pallet = fields.Float(string="Layers/Pallet")
     pallet_quantity = fields.Float(string="Pallet Quantity",compute="_compute_pallet_quantity")
     product_uom_id = fields.Many2one('uom.uom', string="Unit of Measure")
-    pallet_width = fields.Integer(string="Pallet Width (m)", required=True)
-    pallet_length = fields.Integer(string="Pallet Length (m)", required=True)
-    pallet_height = fields.Integer(string="Pallet Height (m)", required=True)
+    pallet_width = fields.Integer(string="Pallet Width (m)")
+    pallet_length = fields.Integer(string="Pallet Length (m)")
+    pallet_height = fields.Integer(string="Pallet Height (m)")
     pallet_weight = fields.Float(string="Pallet Weight (kg)")
 
     pallet_volume = fields.Float(string="Pallet Volume (m³)",compute="_compute_pallet_volume")
 
-    pcs_per_pallet = fields.Integer(string="Pcs/Pallet",compute="_compute_pcs_per_pallet",store=True)
+    pcs_per_pallet = fields.Integer(string="Pcs/Pallet",compute="_compute_pcs_per_pallet")
 
     @api.depends('cases_per_layer', 'layers_per_pallet')
     def _compute_pallet_quantity(self):

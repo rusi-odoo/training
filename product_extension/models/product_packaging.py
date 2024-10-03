@@ -4,11 +4,11 @@ from odoo import models, fields, api
 class ProductPackaging(models.Model):
     _inherit = 'product.packaging'
 
-    case_width = fields.Integer(string="Case Width (mm)", required=True)
-    case_length = fields.Integer(string="Case Length (mm)", required=True)
-    case_height = fields.Integer(string="Case Height (mm)", required=True)
-    case_net_weight = fields.Float(string="Case Net Weight", required=True)
-    case_gross_weight = fields.Float(string="Case Gross Weight (Kg)", required=True)
+    case_width = fields.Integer(string="Case Width (mm)")
+    case_length = fields.Integer(string="Case Length (mm)")
+    case_height = fields.Integer(string="Case Height (mm)")
+    case_net_weight = fields.Float(string="Case Net Weight")
+    case_gross_weight = fields.Float(string="Case Gross Weight (Kg)")
     case_volume = fields.Float(string="Case Volume (m³)", compute="_compute_case_volume")
 
     @api.depends('case_width', 'case_length', 'case_height')
