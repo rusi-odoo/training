@@ -1,7 +1,7 @@
 {
     'name': "Product Extension App",
     'version': '1.0',
-    'depends': ['stock','sale','quality'],      # ask about dependency 
+    'depends': ['stock','sale','quality'],
     'description': """ Product Extension Module """,
     'data': ['security/ir.model.access.csv',
              'security/security.xml',

@@ -12,7 +12,7 @@ class PurchaseOrder(models.Model):
             raise ValidationError("You cannot create a PO for this vendor in its current status.")
             
         elif partner.vendor_status_id.prevent_po == 'no':
-            partner.vendor_status_id = self.env.ref('vendor_extension.vendor_status_active').id
+            partner.vendor_status_id = self.env['vendor.status'].search([('change_user_ids','=',False)]).id
 
         if partner.vendor_status_id.prevent_po == 'alert':
             self.env['mail.activity'].create({

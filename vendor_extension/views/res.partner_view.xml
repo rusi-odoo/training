@@ -5,15 +5,16 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="vat" position="after">
-                <field name="vendor_status_id" />
+                <field name="supplier_rank" invisible="1"/>
+                <field name="vendor_status_id" invisible='supplier_rank == 0'/>
             </field>
             <xpath expr="//notebook" position="inside">
-                <page string="Product Categories" name="product_categories">
+                <page string="Product Categories" name="product_categories" invisible='supplier_rank == 0'>
                     <field name="category_id" widget="many2many_tags"/>
                 </page>
             </xpath>
             <xpath expr="//page[@name='product_categories']" position="after">
-                <page name='compliance' string="Compliance">
+                <page name='compliance' string="Compliance" invisible='supplier_rank == 0'>
                     <group>
                         <group>
                             <field name="sedex_registered" />
