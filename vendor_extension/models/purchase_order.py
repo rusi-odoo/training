@@ -14,7 +14,7 @@ class PurchaseOrder(models.Model):
         elif partner.vendor_status_id.prevent_po == 'no':
             partner.vendor_status_id = self.env['vendor.status'].search([('change_user_ids','=',False)]).id
 
-        if partner.vendor_status_id.prevent_po == 'alert':
+        elif partner.vendor_status_id.prevent_po == 'alert':
             self.env['mail.activity'].create({
                 'res_name': self.name,
                 'automated': True,

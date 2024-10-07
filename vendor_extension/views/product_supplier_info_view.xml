@@ -35,17 +35,11 @@
         <field name="inherit_id" ref="product.product_supplierinfo_search_view" />
         <field name="arch" type="xml">
             <xpath expr="//filter[@name='active_products']" position="after">
-                <filter string="Active" name="active_status"
-                    domain="[('product_tmpl_id.product_status_id.name', '=','Active')]" />
-                <filter string="Pricing" name="pricing_status"
-                    domain="[('product_tmpl_id.product_status_id.name', '=','Pricing')]" />
-                <filter string="NPD" name="npd_status"
-                    domain="[('product_tmpl_id.product_status_id.name', '=','NPD')]" />
-                <filter string="Dormant" name="dormant_status"
-                    domain="[('product_tmpl_id.product_status_id.name', '=', 'Dormant')]" />
-                <filter string="Archived" name="archived_status"
-                    domain="[('product_tmpl_id.product_status_id.name', '=', 'Archived')]" />
-
+                <filter string="Pricing" name="product_status_pricing" domain="[('product_tmpl_id.is_pricing', '=', True)]"/>
+                <filter string="Dormant" name="product_status_dormant" domain="[('product_tmpl_id.is_dormant', '=', 'True')]"/>
+                <filter string="NPD" name="product_status_npd" domain="[('product_tmpl_id.is_npd', '=', 'True')]"/>
+                <filter string="Active" name="product_status_active" domain="[('product_tmpl_id.is_active', '=', 'True')]"/>
+                <filter string="Archived" name="product_status_archived" domain="[('product_tmpl_id.is_archived', '=', 'True')]"/>
             </xpath>
         </field>
     </record>

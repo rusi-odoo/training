@@ -10,6 +10,8 @@
                 <field name="is_archive" />
                 <field name="is_pricing" />
                 <field name="is_active" />
+                <field name="is_dormant" />
+                <field name="is_npd" />
             </field>
             <field name="default_code" position='after'>
                 <field name="customer_product_code" />

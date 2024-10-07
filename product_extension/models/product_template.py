@@ -18,6 +18,8 @@ class ProductTemplate(models.Model):
     is_archive = fields.Boolean(string='Archive')
     is_pricing = fields.Boolean(string='Pricing')
     is_active = fields.Boolean(string='Active')
+    is_dormant = fields.Boolean(string='Dormant')
+    is_npd = fields.Boolean(string='NPD')
 
     @api.depends('landing_cost', 'list_price', 'standard_price')
     def _compute_margin(self):
