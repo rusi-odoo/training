@@ -21,6 +21,13 @@ class ProductTemplate(models.Model):
     is_dormant = fields.Boolean(string='Dormant')
     is_npd = fields.Boolean(string='NPD')
 
+    @api.constrains('product_status_id')
+    def _check_product_status(self):
+        if self.product_status_id.change_up_group_id.id not in self.env.user.groups_id.ids:
+            raise ValidationError("You are not authorized to change the product status.")
+       
+       
+
     @api.depends('landing_cost', 'list_price', 'standard_price')
     def _compute_margin(self):
         for product in self:
@@ -32,26 +39,27 @@ class ProductTemplate(models.Model):
 
     @api.model
     def write(self, vals):
-        current_status = self.product_status_id
-        is_archive = self.is_archive
-        res = super(ProductTemplate, self).write(vals)
         if 'product_status_id' in vals:
             new_status = self.product_status_id.browse(vals['product_status_id'])
-            if is_archive is True:
-
+            if self.is_archive is True:
                 if 'is_pricing' not in vals and 'is_active' not in vals:
                     raise ValidationError(('Products in "Archived" status can only be moved to "Pricing" or "Active".'))
 
                 elif ('is_pricing' in vals and vals['is_pricing'] is False) or ('is_active' in vals and vals['is_active'] is False):
                     raise ValidationError(('Products in "Archived" status can only be moved to "Pricing" or "Active".'))
-                
+                    
+                elif self.product_status_id.change_down_group_id.id  and self.product_status_id.change_down_group_id.id not in self.env.user.groups_id.ids:
+                  raise ValidationError(('You are not authorized to change status to lower hierarchy'))
+
                 else:
                     self.is_archive=False
 
-            elif new_status.hierarchy <= current_status.hierarchy:
+            elif new_status.hierarchy <= self.product_status_id.hierarchy:
                 raise ValidationError(
                     ('Status changes cannot be made to a lower hierarchy'))
             else:
                  self.is_pricing=False
                  self.is_active=False
-        return res
+        return super(ProductTemplate, self).write(vals)
+    
+   

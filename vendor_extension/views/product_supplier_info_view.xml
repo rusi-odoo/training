@@ -39,7 +39,7 @@
                 <filter string="Dormant" name="product_status_dormant" domain="[('product_tmpl_id.is_dormant', '=', 'True')]"/>
                 <filter string="NPD" name="product_status_npd" domain="[('product_tmpl_id.is_npd', '=', 'True')]"/>
                 <filter string="Active" name="product_status_active" domain="[('product_tmpl_id.is_active', '=', 'True')]"/>
-                <filter string="Archived" name="product_status_archived" domain="[('product_tmpl_id.is_archived', '=', 'True')]"/>
+                <filter string="Archived" name="product_status_archived" domain="[('product_tmpl_id.is_archive', '=', 'True')]"/>
             </xpath>
         </field>
     </record>
