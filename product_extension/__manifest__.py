@@ -4,7 +4,6 @@
     'depends': ['stock','sale','quality'],
     'description': """ Product Extension Module """,
     'data': ['security/ir.model.access.csv',
-            #  'security/security.xml',
              'views/product_status_views.xml',
              'views/product_template_view.xml',
              'views/product_packaging_view.xml',
