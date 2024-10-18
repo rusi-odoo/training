@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_dealer_code" model="ir.sequence">
+        <field name="name">Dealer Code</field>
+        <field name="code">res.partner.dealer</field>
+        <field name="padding">4</field>
+        <field name="prefix">5</field>
+        <field name="number_increment">1</field>
+        <field name="number_next">1</field>
+    </record>
+</odoo>

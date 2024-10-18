@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherited_mcxi_partner_commission" model="ir.ui.view">
+        <field name="name">sale.order.form.inherited.mcxi.partner.commission</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="mcxi_referrer_id" readonly="referrer_id != False" force_save="1" />
+            </field>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='qty_to_invoice']"
+                position="after">
+                <field name="commission" />
+            </xpath>
+            <xpath expr="//field[@name='referrer_id']" position="attributes">
+                <attribute name="readonly">mcxi_referrer_id != False</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <menuitem id="menu_generate_internal_report"
+        name="Generate Internal Report"
+        parent="sale.menu_sale_report"
+        action="action_internal_report"
+        sequence="50"/>
+
+    <menuitem id="menu_generate_external_report"
+        name="Generate External Report"
+        parent="sale.menu_sale_report"
+        action="action_external_report"
+        sequence="60"/>
+</odoo>

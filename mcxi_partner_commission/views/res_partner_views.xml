@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="res_partner_view_inherited_mcxi_partner_commission" model="ir.ui.view">
+        <field name="name">res.partner.view.inherited.mcxi.partner.commission</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="contact_type" widget="radio"/>
+                <field name="sales_channel" widget="radio" options="{'horizontal': true}"/>
+                <field name="dealer_code"/>             
+            </xpath>
+            <xpath expr="//notebook[last()]" position="inside">
+                <page string="PRICING / INCENTIVES" name="pricing_incentives">
+                    <group>
+                        <group name="mcxi_pricing">
+                            <field name="commission_rate"/>
+                            <field name="commission" invisible="commission_rate in ['percentage']" />
+                        </group>
+                        <group name="mcxi_journal">
+                            <field name="commission_journal_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='team_id']" position="after">
+                <field name="dsm_id"/>   
+            </xpath>
+        </field>
+    </record>
+</odoo>

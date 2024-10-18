@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_move_form_inherit_mcxi_partner_commission" model="ir.ui.view">
+        <field name="name">view.move.form.inherit.mcxi.partner.commission</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='preview_invoice']" position="before">
+                <button name="action_create_commission" type="object" string="Create External Commission" class="oe_highlight"
+                        invisible=" commission_external_move_id or state != 'posted' or move_type  in ( 'out_refund', 'entry', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt')" context="{'is_external': True}"/>
+                <button name="action_create_commission" type="object" string="Create Internal Commission" class="oe_highlight"
+                        invisible=" commission_internal_move_id or state != 'posted' or move_type  in ( 'out_refund', 'entry', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt')" context="{'is_internal': True}"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button"
+                        name="action_view_commission"
+                        type="object"
+                        icon="fa-pencil-square-o"
+                        invisible="not commission_external_move_id or move_type in ( 'out_refund', 'in_invoice', 'entry', 'in_refund', 'out_receipt', 'in_receipt')" context="{'is_external': True}">
+                        <field name="total_external_commission" string="External Commission" widget="statinfo"/>
+                </button>
+                <button class="oe_stat_button"
+                        name="action_view_commission"
+                        type="object"
+                        icon="fa-pencil-square-o"
+                        invisible="not commission_internal_move_id or move_type in ( 'out_refund', 'in_invoice', 'entry', 'in_refund', 'out_receipt', 'in_receipt')" context="{'is_internal': True}">
+                        <field name="total_internal_commission" string="Internal Commission" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="commission_external_move_id" invisible="1"/>
+                <field name="commission_internal_move_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
