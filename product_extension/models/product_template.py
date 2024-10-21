@@ -9,8 +9,7 @@ class ProductTemplate(models.Model):
         return self.env['product.status'].search([('change_up_group_id', '=', self.env.ref('base.group_user').id)], limit=1)
 
      # In excel sheet it was mention to keep product_status field Char but i think it would be M2O field
-    product_status_id = fields.Many2one(
-        'product.status', required=True, default=_default_product_status)
+    product_status_id = fields.Many2one('product.status', required=True, default=_default_product_status)
     customer_product_code = fields.Char(string='Customer Reference')
     hs_code = fields.Char(string='HS Code', required=True)
     palletspec_ids = fields.One2many(
@@ -26,8 +25,7 @@ class ProductTemplate(models.Model):
     @api.constrains('product_status_id')
     def _check_product_status(self):
         if self.product_status_id.change_up_group_id.id not in self.env.user.groups_id.ids:
-            raise ValidationError(
-                "You are not authorized to change the product status.")
+            raise ValidationError("You are not authorized to change the product status.")
 
     @api.depends('landing_cost', 'list_price', 'standard_price')
     def _compute_margin(self):
@@ -35,8 +33,7 @@ class ProductTemplate(models.Model):
             if product.list_price == 0:
                 product.margin = 0
             else:
-                product.margin = (
-                    (product.list_price - (product.standard_price + product.landing_cost)) / product.list_price)
+                product.margin = ((product.list_price - (product.standard_price + product.landing_cost)) / product.list_price)
 
     @api.model
     def write(self, vals):
