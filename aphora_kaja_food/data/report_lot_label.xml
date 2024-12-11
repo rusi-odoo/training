@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="aphora_report_lot_label" inherit_id="stock.report_lot_label">
+        <!-- Updated foreach condition attributes and page type -->
+        <xpath expr="//div[@t-as='page_docs']" position="attributes">
+            <attribute name="t-foreach">docs</attribute>
+            <attribute name="t-att-style">'padding: 2mm;'</attribute>
+            <attribute name="class" remove="o_label_sheet" add="page"/>
+            <attribute name="t-att-style">'border: none'</attribute>
+        </xpath>
+        <!-- Adding aphora allergen_ids between name and lot name -->
+        <xpath expr="//span[@name='lot_name']" position="before">
+            <div t-if="o.product_id.aphora_allergen_ids">
+                <span t-field="o.product_id.aphora_allergen_ids"/>
+            </div>
+        </xpath>
+        <!-- Adjusting cols, rows and css according to the need -->
+        <xpath expr="//t[@t-set='nRows']" position="attributes">
+            <attribute name="t-value">1</attribute>
+        </xpath>
+        <xpath expr="//t[@t-set='nCols']" position="attributes">
+            <attribute name="t-value">1</attribute>
+        </xpath>
+        <xpath expr="//t[@t-set='final_barcode'][1]/parent::div" position="attributes">
+            <attribute name="t-att-style">'position:relative; width: inherit; min-height:80mm !important;'</attribute>
+        </xpath>
+        <!-- Changing barcode to qrcode -->
+        <xpath expr="//span[@t-out='final_barcode']" position="attributes">
+            <attribute name="class" separator=" " add="d-none"/>
+        </xpath>
+        <xpath expr="//span[@t-out='final_barcode']" position="after">
+            <img t-att-src="'/report/barcode/QR/%s'% o.name" style="width:40mm;height:40mm;float:right; bottom: 0;" alt="Barcode"/>
+        </xpath>
+        <xpath expr="//t[@t-else='']/span" position="attributes">
+            <attribute name="class" separator=" " add="d-none"/>
+        </xpath>
+        <xpath expr="//t[@t-else='']/span" position="after">
+            <div t-att-style="'position:absolute; right:.5px; bottom:.5px'">
+                <img t-att-src="'/report/barcode/QR/%s'% o.name" style="width:40mm;height:40mm;float:right;" alt="Barcode"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

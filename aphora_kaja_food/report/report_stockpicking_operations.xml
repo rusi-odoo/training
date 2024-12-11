@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_picking" inherit_id="stock.report_picking">
+            <xpath expr="//t[@t-set='has_serial_number']" position="after">
+                <t t-set="has_best_before_date" t-value="any(move_line.aphora_use_date for move_line in o.move_line_ids)" groups="stock.group_production_lot"/>
+            </xpath>
+            <xpath expr="//th[@name='th_serial_number']" position="after">
+                <th name="th_best_before_date" class="text-center" t-if="has_best_before_date">
+                    <strong>Best before Date</strong>
+                </th>
+            </xpath>
+            <xpath expr="//td[@t-if='has_serial_number']" position="after">
+                <td class="text-center" t-if="has_best_before_date">
+                    <span t-if="has_best_before_date and ml.aphora_use_date" t-esc="ml.aphora_use_date"/>
+                </td>
+            </xpath>
+            <xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']//thead/tr/th[last()]" position="after">
+                <th name="th_notes" class="text-center">
+                    <strong>Notes</strong>
+                </th>
+            </xpath>
+            <xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']//tbody/tr/td[last()]" position="after">
+                <td class="text-center"></td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -8,10 +8,16 @@ from odoo.exceptions import ValidationError
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    total_external_commission = fields.Monetary(compute='_compute_total_commission',store=True)
-    total_internal_commission = fields.Monetary(compute='_compute_total_commission',store=True)
-    commission_external_move_id = fields.Many2one('account.move')
-    commission_internal_move_id = fields.Many2one('account.move')
+    total_external_commission = fields.Monetary(compute='_compute_total_commission', store=True)
+    total_internal_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total Internal Commission")
+    total_account_owner_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total Account Owner Commission")
+    total_dsm_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total DSM Commission")
+    total_bdm_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total BDM Commission")
+    total_agent1_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total Agent1 Commission")
+    total_agent2_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total Agent2 Commission")
+    total_agent3_commission = fields.Monetary(compute='_compute_total_commission', store=True, string="Total Agent3 Commission")
+    commission_external_move_id = fields.Many2one('account.move', copy=False)
+    commission_internal_move_id = fields.Many2one('account.move', copy=False)
 
     @api.depends('line_ids','line_ids.quantity')
     def _compute_total_commission(self):
@@ -24,29 +30,62 @@ class AccountMove(models.Model):
             if sale_order and sale_order.user_id.partner_id:
                 commission_value = sale_order.user_id.partner_id.commission
                 move.total_internal_commission = total_quantity * commission_value
+            if sale_order.partner_id.is_account_commission and sale_order.partner_id.account_owner_id:
+                commission_value = sale_order.partner_id.account_owner_id.partner_id.commission
+                move.total_account_owner_commission = total_quantity * commission_value
+            if sale_order.partner_id.is_dsm_commission and sale_order.partner_id.dsm_id:
+                commission_value = sale_order.partner_id.dsm_id.work_contact_id.commission
+                move.total_dsm_commission = total_quantity * commission_value
+            if sale_order.partner_id.is_bdm_commission and sale_order.bdm_id:
+                commission_value = sale_order.bdm_id.work_contact_id.commission
+                move.total_bdm_commission = total_quantity * commission_value
+            if sale_order.agent_1_id.commission:
+                commission_value = sale_order.agent_1_id.commission
+                move.total_agent1_commission = commission_value * total_quantity
+            if sale_order.agent_2_id.commission:
+                commission_value = sale_order.agent_2_id.commission
+                move.total_agent2_commission = commission_value * total_quantity
+            if sale_order.agent_3_id.commission:
+                commission_value = sale_order.agent_3_id.commission
+                move.total_agent3_commission = commission_value * total_quantity
+
+    def _prepare_commission_line_vals(self, move, partner_id):
+        line_vals = []
+        total_commission = 0.0
+        for line in move.invoice_line_ids:
+            commission_amount = partner_id.commission * line.quantity
+            if move.move_type == 'out_invoice':
+                debit = commission_amount
+                credit = 0
+            else:
+                debit = 0
+                credit = commission_amount
+            line_vals.append({
+                'name': _('Commission Charge for %s: %s') % (
+                    line.move_id.name, line.product_id.display_name or line.name),
+                'account_id': partner_id.commission_journal_id.id,
+                'debit': debit,
+                'credit': credit,
+                'partner_id': partner_id.id,
+                'mcxi_origin_invoice_line_id': line.id,
+            })
+            total_commission += commission_amount
+        line_vals.append({
+            'name': _('Amount Payable for %s') % move.name,
+            'account_id': move.partner_id.property_account_payable_id.id,
+            'debit': 0.0 if move.move_type == 'out_invoice' else total_commission,
+            'credit': total_commission if move.move_type == 'out_invoice' else 0.0,
+            'partner_id': partner_id.id,
+        })
+        return line_vals
 
     def _create_commission_journal_entry(self, move, partner_id):
-        total_quantity = sum(line.quantity for line in move.line_ids if line.quantity)  
+        line_vals = self._prepare_commission_line_vals(move, partner_id)
         journal_entry_vals = {
-            'date': move.invoice_date,
+            'date': move.invoice_date or move.date,
             'ref': move.payment_reference or _('Journal Entry'),
             'move_type': 'entry',
-            'line_ids': [
-                Command.create({
-                    'name': _('Amount Payable for %s') % move.name,
-                    'account_id': move.partner_id.property_account_payable_id.id,
-                    'debit': 0.0,
-                    'credit': (partner_id.commission * total_quantity) or 0.0,
-                    'partner_id': partner_id.id,
-                }),
-                Command.create({
-                    'name': _('Commission Charge for %s') % move.name,
-                    'account_id': partner_id.commission_journal_id.id,
-                    'debit': (partner_id.commission * total_quantity) or 0.0,
-                    'credit': 0.0,
-                    'partner_id': partner_id.id,
-                })
-            ],
+            'line_ids': [Command.create(line_val) for line_val in line_vals],
         }
         return self.env['account.move'].create(journal_entry_vals)
 
@@ -150,3 +189,21 @@ class AccountMove(models.Model):
         if 'state' in vals:
             self._update_commission_state()
         return res
+
+    def _reverse_moves(self, default_values_list=None, cancel=False):
+        reverse_moves = super()._reverse_moves(default_values_list, cancel)
+        commission_moves = self.filtered(
+            lambda move: move.move_type == 'out_invoice').commission_external_move_id.filtered(
+            lambda move: move.state == 'posted')
+        if commission_moves:
+            reverse_moves.with_context(is_external=True).action_create_commission()
+        return reverse_moves
+
+
+class AccountMoveLine(models.Model):
+    _inherit = "account.move.line"
+
+    # To show commission in excel report
+    mcxi_origin_invoice_line_id = fields.Many2one(
+        'account.move.line', copy=False, readonly=True, string="Related Invoice Line")
+    mcxi_commission_line_ids = fields.One2many('account.move.line', 'mcxi_origin_invoice_line_id')

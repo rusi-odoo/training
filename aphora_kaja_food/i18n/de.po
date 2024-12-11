@@ -1,0 +1,1105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* aphora_kaja_food
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-04 13:48+0000\n"
+"PO-Revision-Date: 2024-11-04 13:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.report,print_report_name:aphora_kaja_food.action_report_lot_label_aphora
+msgid "'Lot-Serial - %s' % object.name"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "100"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.report_saleorder_document
+msgid "2023-12-31"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_kaja_legacy_product_template_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<span class=\"flex-grow-1\">g</span>"
+msgstr "<span class=\"flex-grow-1\">g</span>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_sale_order_form_view
+msgid "<span>Confirmed</span>"
+msgstr "<span>Bestätigt</span>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Activity of Water:</strong>"
+msgstr "<strong>AW-Wert oder Restfeuchte</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Adjusted Weight:</strong>"
+msgstr "<strong>Brutto-Gewicht:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_delivery_document2
+msgid ""
+"<strong>Adjusted Weight:</strong>\n"
+"                <br/>"
+msgstr ""
+"<strong>Brutto-Gewicht:</strong>\n"
+"                <br/>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Allergenes:</strong>"
+msgstr "<strong>Allergene:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid ""
+"<strong>Batch Size</strong>\n"
+"                <br/>"
+msgstr ""
+"<strong>Losgröße</strong>\n"
+"                <br/>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Best Before Date (Customer):</strong>"
+msgstr "<strong>MHD Vereinbarung Kunde:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Best Before Date (Product Sheet):</strong>"
+msgstr "<strong>MHD Datenblatt:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Best Before Date (Production):</strong>"
+msgstr "<strong>MHD Produktion:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.report_picking
+msgid "<strong>Best before Date</strong>"
+msgstr "<strong>MHD</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Coating Note:</strong>"
+msgstr "<strong>Coating-Hinweis:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.report_saleorder_document
+msgid "<strong>Delivery Date:</strong><br/>"
+msgstr "<strong>Geplantes Lieferdatum:</strong><br/>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Layers/Pallet:</strong>"
+msgstr "<strong>Lagen pro Palette:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Nomenclature:</strong>"
+msgstr "<strong>Chargenvergabe:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.report_picking
+msgid "<strong>Notes</strong>"
+msgstr "<strong>Notiz</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_workorder_view_gantt
+msgid "<strong>Product: </strong>"
+msgstr "<strong>Produkt: </strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Production Description:</strong>"
+msgstr "<strong>Produktionshinweis:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Quality Control:</strong>"
+msgstr "<strong>Qualitätskontrolle:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Remaining Term (Customer):</strong>"
+msgstr "<strong>Vereinbarte Restlaufzeit (Kunde):</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Retention Sample:</strong>"
+msgstr "<strong>Rückstellmuster:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Shipping Note:</strong>"
+msgstr "<strong>Versandhinweis:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Tray Label:</strong>"
+msgstr "<strong>VPE-Etikett:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Trays/Layer:</strong>"
+msgstr "<strong>VPE/Lage:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Units/Tray:</strong>"
+msgstr "<strong>Stück/VPE:</strong>"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "<strong>Weight Control:</strong>"
+msgstr "<strong>Gewichtskontrolle:</strong>"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_actitivity_of_water
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_actitivity_of_water
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_actitivity_of_water
+msgid "Activity of Water"
+msgstr "AW-Wert oder Restfeuchte"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_res_config_settings_view_form
+msgid "Add a default note to deliveries"
+msgstr "Fügen Sie eine Notiz am Ende von Lieferungen ein"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_view_picking_form
+msgid "Add a note that will be printed on the Delivery Slip"
+msgstr "Fügen Sie eine Notiz hinzu, die auf dem Lieferschein ausgedruckt wird"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+msgid "Add a note that will be printed on the Production Order"
+msgstr ""
+"Fügen Sie eine Notiz hinzu, die auf dem Fertigungsauftrag ausgedruckt wird"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_additives
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_additives_2
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_additives
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_additives_2
+msgid "Additives"
+msgstr "Zusatzstoffe"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_stock_picking__aphora_shipping_weight_adjusted
+msgid "Adjusted Shipping Weight"
+msgstr "Brutto-Gewicht"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_weight_adjusted
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_weight_adjusted
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_weight_adjusted
+msgid "Adjusted Weight"
+msgstr "Brutto-Gewicht"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_allergen_ids
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_allergen_ids
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_allergen_ids
+msgid "Allergenes"
+msgstr "Allergene"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.report,name:aphora_kaja_food.action_report_lot_label_aphora
+msgid "Aphora: Lot/Serial Number (PDF)"
+msgstr "Los-/Seriennummer (PDF)"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_appearance
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_appearance
+msgid "Appearance"
+msgstr "Aussehen"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_is_approved
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_is_approved
+msgid "Approved"
+msgstr "Freigegeben"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_approver
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_approver
+msgid "Approver"
+msgstr "Freigabe"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_approver_development
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_approver_development
+msgid "Approver (Development)"
+msgstr "Freigabe Produktentwicklung"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_lot_label
+msgid "Barcode"
+msgstr "Barcode"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_batch_size
+msgid "Batch Size"
+msgstr "Losgröße"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_best_before_date_customer
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_best_before_date_customer
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_best_before_date_customer
+msgid "Best Before Date (Customer)"
+msgstr "MHD Vereinbarung Kunde"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_best_before_date_sheet
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_best_before_date_sheet
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_best_before_date_sheet
+msgid "Best Before Date (Product Sheet)"
+msgstr "MHD Datenblatt"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_best_before_date_production
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_best_before_date_production
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_best_before_date_production
+msgid "Best Before Date (Production)"
+msgstr "MHD Produktion"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_stock_move_line__aphora_use_date
+msgid "Best before Date"
+msgstr "MHD"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Stückliste"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_billing_dual_system
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_billing_dual_system
+msgid "Billing Dual System"
+msgstr "Abrechnung Duales System"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_is_bio
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_is_bio
+msgid "Bio"
+msgstr "Bio"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_stock_move__aphora_batch_uom_qty
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrp_production_components
+msgid "By Batch"
+msgstr "Losgröße"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_ccp
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_ccp
+msgid "CCP"
+msgstr "CCP"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_carbohydrates_level
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_carbohydrates_level
+msgid "Carbohydrates"
+msgstr "Kohlenhydrate"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_needs_certificate
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_needs_certificate
+msgid "Certificate"
+msgstr "Zertifikat nötig"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_lot_label_layout
+msgid "Choose the sheet layout to print lot labels"
+msgstr "Wählen Sie das Layout zum Drucken von Losetiketten"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_has_coating
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_has_coating
+msgid "Coating"
+msgstr "Hat Coating"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_coating_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_coating_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_coating_note
+msgid "Coating Note"
+msgstr "Coating-Hinweis"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_color
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_color
+msgid "Color"
+msgstr "Farbe"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_gmo_2__none
+msgid "Complies with EU Regulation 1829/2003 and 1830/2003"
+msgstr "Nicht Kennzeichnungspflichtig - entspricht EU VO 1829/2003 und 1830/2003"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_is_consignment
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_is_consignment
+msgid "Consignment"
+msgstr "Gestellt von Kunde"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_consistency
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_consistency
+msgid "Consistency"
+msgstr "Konsistenz"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_warning_note_2__hemp
+msgid "Contains hemp"
+msgstr "Enthält Hanf"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__create_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__create_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__create_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__create_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__create_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__create_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__create_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__create_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__create_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__create_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_creator
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_creator
+msgid "Creator"
+msgstr "Ersteller"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_partner_id
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_billing_dual_system__customer
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_customer_code
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_customer_code
+msgid "Customer Reference"
+msgstr "Artikelnr. Kunde"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_customer_tray_code
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_customer_tray_code
+msgid "Customer Tray Reference"
+msgstr "VPE-Artikelnr. Kunde"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_res_company__aphora_delivery_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_res_config_settings__aphora_delivery_note
+msgid "Default Delivery Note"
+msgstr "Lieferhinweis"
+
+#. module: aphora_kaja_food
+#. odoo-python
+#: code:addons/aphora_kaja_food/models/sale_order.py:0
+#, python-format
+msgid "Delivery Date"
+msgstr "Lieferdatum"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_sale_order__aphora_commitment_date_confirmed
+msgid "Delivery Date Confirmed"
+msgstr "Bestätigtes Lieferdatum"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_stock_picking__aphora_delivery_note
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_view_picking_form
+msgid "Delivery Note"
+msgstr "Lieferhinweis"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_lmiv_name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_lmiv_name
+msgid "Description (LMIV)"
+msgstr "Bezeichnung (LMIV)"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_view_quantity_report_wizard
+msgid "Discard"
+msgstr "Abbrechen"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__display_name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__display_name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__display_name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__display_name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__display_name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_documents_document
+msgid "Document"
+msgstr "Dokument"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_date_finished_confirmed
+msgid "End Date Confirmed"
+msgstr "Bestätigtes Ende"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_energy_kj
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_energy_kj
+msgid "Energy (kJ)"
+msgstr "Energie (kJ)"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_energy_kcal
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_energy_kcal
+msgid "Energy (kcal)"
+msgstr "Energie (kcal)"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_documents_document__aphora_validity_date
+msgid "Expiration"
+msgstr "Ablaufdatum"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_description_extra
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_description_extra
+msgid "Extra Note"
+msgstr "Besonderheit/Kommentar"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_fat_level
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_fat_level
+msgid "Fat"
+msgstr "Fett"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_fiber_level
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_fiber_level
+msgid "Fiber"
+msgstr "Ballaststoffe"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_filling_weight
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_filling_weight
+msgid "Filling Weight"
+msgstr "Füllgewicht"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_lot_label_layout__print_format
+msgid "Format"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_gmo
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_gmo_2
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_gmo
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_gmo_2
+msgid "GMO"
+msgstr "GVO"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_has_kits
+msgid "Has Kits"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_sale_order__show_json_popover
+msgid "Has late picking"
+msgstr "Hat verspätete Kommissionierung"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "INVENTORY"
+msgstr "LAGER"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_warning_note_2__caffeine
+msgid ""
+"Increased caffeine content. Not recommended for children and pregnant or "
+"breastfeeding women"
+msgstr "Erhöhter Koffeingehalt. Für Kinder und schwangere oder stillende Frauen nicht empfohlen"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_ingredients
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_ingredients
+msgid "Ingredients"
+msgstr "Zutatenliste"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_description_internal
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_description_internal
+msgid "Internal Description"
+msgstr "Interner Hinweis"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_ionizing_radiation
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_ionizing_radiation_2
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_ionizing_radiation
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_ionizing_radiation_2
+msgid "Ionizing Radiation"
+msgstr "Ionisierende Strahlen"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_sale_order__json_popover
+msgid "JSON data for the popover widget"
+msgstr "JSON-Daten für Popover-Widget"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_billing_dual_system__company
+msgid "Kaja Food"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_warning_note_2__no_child
+msgid "Keep out of reach of children"
+msgstr "Außerhalb der Reichweite von Kindern aufbewahren"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrp_production_components
+msgid "Kit"
+msgstr "Bausatz"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__write_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__write_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__write_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__write_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__write_uid
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt geändert von"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__write_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__write_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__write_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__write_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__write_date
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt geändert am"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_layers_per_pallet
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_layers_per_pallet
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_layers_per_pallet
+msgid "Layers/Pallet"
+msgstr "Lagen pro Palette"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_kaja_legacy_product_template_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+msgid "Legacy"
+msgstr "Zusatzfelder"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_description_long
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_description_long
+msgid "Long Description"
+msgstr "Langtext"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_ccp__magnet
+msgid "Magnet"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_ccp__magnet_metal
+msgid "Magnet, Metal Detector"
+msgstr "Magnet, Metalldetektor"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_warning_note_2__residue
+msgid "May contain shells and core residues"
+msgstr "Kann Schalen und Kernreste enthalten"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_warning_note_2__laxative
+msgid "May have a laxative effect if consumed in excess"
+msgstr "Kann bei übermäßigem Verzehr abführend wirken"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_ccp__metal
+msgid "Metal Detector"
+msgstr "Metalldetektor"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_description_mibi
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_description_mibi
+msgid "Mibi Instructions"
+msgstr "Mibi Vorgaben"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_allergen__name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_group__name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_pack_type__name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_property__name
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_product_trace__name
+msgid "Name"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_lot_nomenclature
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_lot_nomenclature
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_lot_nomenclature
+msgid "Nomenclature"
+msgstr "Chargenvergabe"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_note
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+msgid "Note"
+msgstr "Notiz"
+
+#. module: aphora_kaja_food
+#. odoo-python
+#: code:addons/aphora_kaja_food/models/sale_order.py:0
+#, python-format
+msgid "Order Date"
+msgstr "Auftragsdatum"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_owner
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_owner
+msgid "Owner"
+msgstr "Eigentümer"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__lot_label_layout__print_format__4x12
+msgid "PDF Labels"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "PRODUCTION"
+msgstr "FERTIGUNG"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_package_ean
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_package_ean
+msgid "Package EAN"
+msgstr "Karton EAN"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_aphora_product_pack_type
+msgid "Packaging Type"
+msgstr "Verpackungsart"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.act_window,name:aphora_kaja_food.action_aphora_product_pack_type
+#: model:ir.ui.menu,name:aphora_kaja_food.aphora_product_pack_type
+msgid "Packaging Types"
+msgstr "Verpackungsarten"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_view_sales_order_filter
+msgid "Planning Issue"
+msgstr "Planungsproblem"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_poly_alc
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_poly_alc
+msgid "Polyhydric Alcohols"
+msgstr "Mehrwertige Alkohole"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_poly_alc_erithritol
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_poly_alc_erithritol
+msgid "Polyhydric Alcohols (Erithritol)"
+msgstr "Mehrwertige Alkohole (Erythrit)"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_pack_type_1_id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_pack_type_1_id
+msgid "Primary Packaging Type"
+msgstr "Primäre Verpackung"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_product_template
+msgid "Product"
+msgstr "Produkt"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_aphora_product_allergen
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_product_pack_type_tree
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_product_trace_tree
+msgid "Product Allergen"
+msgstr "Allergen"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.act_window,name:aphora_kaja_food.action_aphora_product_allergenes
+#: model:ir.ui.menu,name:aphora_kaja_food.aphora_product_allergences
+msgid "Product Allergenes"
+msgstr "Allergene"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_product_ean
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_product_ean
+msgid "Product EAN"
+msgstr "Artikel EAN"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_aphora_product_group
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_group_id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_group_id
+msgid "Product Group"
+msgstr "Produktgruppe"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.act_window,name:aphora_kaja_food.action_aphora_product_group_tree
+#: model:ir.ui.menu,name:aphora_kaja_food.aphora_account_product_group
+#: model:ir.ui.menu,name:aphora_kaja_food.aphora_product_group
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_product_group_tree
+msgid "Product Groups"
+msgstr "Produktgruppen"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Produktbewegungen (Lagerbuchung)"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.act_window,name:aphora_kaja_food.action_product_property_tree
+#: model:ir.ui.menu,name:aphora_kaja_food.aphora_product_category
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_product_allergen_tree
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_product_property_tree
+msgid "Product Properties"
+msgstr "Eigenschaften"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_aphora_product_property
+msgid "Product Property"
+msgstr "Eigenschaft"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_aphora_product_trace
+msgid "Product Trace"
+msgstr "Spur von"
+
+#. module: aphora_kaja_food
+#: model:ir.actions.act_window,name:aphora_kaja_food.action_aphora_product_trace
+#: model:ir.ui.menu,name:aphora_kaja_food.aphora_product_trace
+msgid "Product Traces"
+msgstr "Spuren von"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_description_production
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_description_production
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_description_production
+msgid "Production Description"
+msgstr "Produktionshinweis"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_mrp_production
+msgid "Production Order"
+msgstr "Fertigungsauftrag"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_property_ids
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_property_ids
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_protein_level
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_protein_level
+msgid "Protein"
+msgstr "Eiweiß"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_mrp_production_form_view
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_report_mrporder
+msgid "QUALITY"
+msgstr "QUALITÄT"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_needs_quality_check
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_needs_quality_check
+msgid "Quality Check"
+msgstr "QS Freigabe nötig"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_description_quality
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_description_quality
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_description_quality
+msgid "Quality Control"
+msgstr "Qualitätskontrolle"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_aphora_quantity_report_wizard__quantity
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_workcenter_productivity__aphora_quantity
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_aphora_quantity_report_wizard
+msgid "Quantity Report Wizard"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:mrp.workcenter.productivity.loss,name:aphora_kaja_food.block_reason_quantity_tracking
+msgid "Quantity Tracking"
+msgstr "Mengenverfolgung"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_residual_term_customer
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_residual_term_customer
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_residual_term_customer
+msgid "Remaining Term (Customer)"
+msgstr "Vereinbarte Restlaufzeit (Kunde)"
+
+#. module: aphora_kaja_food
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_view_quantity_report_wizard
+msgid "Report"
+msgstr "Bericht"
+
+#. module: aphora_kaja_food
+#. odoo-javascript
+#. odoo-python
+#: code:addons/aphora_kaja_food/models/mrp_workcenter.py:0
+#: code:addons/aphora_kaja_food/static/src/components/menuPopup.xml:0
+#: model_terms:ir.ui.view,arch_db:aphora_kaja_food.aphora_view_quantity_report_wizard
+#, python-format
+msgid "Report Quantities"
+msgstr "Menge melden"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_retention_sample
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_retention_sample
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_retention_sample
+msgid "Retention Sample"
+msgstr "Rückstellmuster"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_sale_order
+msgid "Sales Order"
+msgstr "Verkaufsauftrag"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_salt_level
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_salt_level
+msgid "Salt"
+msgstr "Salz"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_fat_level_satured
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_fat_level_satured
+msgid "Saturated Fat"
+msgstr "Fett - davon gesättige Fettsäuren"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_pack_type_2_id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_pack_type_2_id
+msgid "Secondary Packaging Type"
+msgstr "Sekundäre Verpackung"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_shipping_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_shipping_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_shipping_note
+msgid "Shipping Note"
+msgstr "Lieferhinweis"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_size_shape
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_size_shape
+msgid "Size/Shape"
+msgstr "Größe/Form"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_smell
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_smell
+msgid "Smell"
+msgstr "Geruch"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_nutritional_values_source
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_nutritional_values_source
+msgid "Source (Nutrition)"
+msgstr "Quelle Nährwerte"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_raw_materials_info_source
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_raw_materials_info_source
+msgid "Source (Raw Materials)"
+msgstr "Quelle Rohstoff-Infos"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_warning_note_2__glucose
+msgid "Source of glucose"
+msgstr "Quelle von Glucose"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_stock_move
+msgid "Stock Move"
+msgstr "Lagerbuchung"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_stock_rule
+msgid "Stock Rule"
+msgstr "Bestandsregel"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_storage_info
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_storage_info
+msgid "Storage Information"
+msgstr "Lagerung"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_sugar_level
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_sugar_level
+msgid "Sugar"
+msgstr "Kohlenhydrate - davon Zucker"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_surplus_quantity
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_surplus_quantity
+msgid "Surplus Quantity (%)"
+msgstr "Mehrmenge (%)"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_taste
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_taste
+msgid "Taste"
+msgstr "Geschmack"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_pack_type_3_id
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_pack_type_3_id
+msgid "Tertiary Packaging Type"
+msgstr "Tertiäre Verpackung"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_additives_2__none
+msgid ""
+"The product contains no additives (antioxidants, preservatives or other "
+"chemical additives)"
+msgstr "Das Produkt enthält keine Zusatzstoffe (Antioxidantien, Konservierungsmittel oder andere chemischen Zusätze)"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields.selection,name:aphora_kaja_food.selection__product_template__aphora_ionizing_radiation_2__none
+msgid ""
+"The product or its ingredients have not been treated with ionizing "
+"radiation."
+msgstr "Das Produkt oder seine Zutaten wurden nicht mit ionisierenden Strahlen behandelt."
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,help:aphora_kaja_food.field_stock_move_line__aphora_use_date
+msgid ""
+"This is the date on which the goods with this Serial Number start "
+"deteriorating, without being dangerous yet."
+msgstr "Dies ist das Datum, an dem die Waren mit dieser Seriennummer zu verderben beginnen, ohne jedoch gefährlich zu sein."
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_trace_ids
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_trace_ids
+msgid "Traces of"
+msgstr "Spuren von"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_tray_ean
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_tray_ean
+msgid "Tray EAN"
+msgstr "VPE/Tray EAN"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_tray_label
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_tray_label
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_tray_label
+msgid "Tray Label"
+msgstr "Tray-Etikett"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_trays_per_layer
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_trays_per_layer
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_trays_per_layer
+msgid "Trays/Layer"
+msgstr "VPE pro Lage"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_units_per_tray
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_units_per_tray
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_units_per_tray
+msgid "Units/Tray"
+msgstr "Stück pro VPE"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_warning_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_warning_note_2
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_warning_note
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_warning_note_2
+msgid "Warnings"
+msgstr "Warnhinweis"
+
+#. module: aphora_kaja_food
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_mrp_production__aphora_weight_check
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_product__aphora_weight_check
+#: model:ir.model.fields,field_description:aphora_kaja_food.field_product_template__aphora_weight_check
+msgid "Weight Control"
+msgstr "Gewichtskontrolle"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_mrp_workorder
+msgid "Work Order"
+msgstr "Arbeitsauftrag"
+
+#. module: aphora_kaja_food
+#: model:ir.model,name:aphora_kaja_food.model_mrp_workcenter_productivity
+msgid "Workcenter Productivity Log"
+msgstr "Produktivitätsprotokoll des Arbeitsplatzes"

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="maitree_product_category_view" model="ir.ui.view">
+            <field name="name">maitree.product.category.view</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view" />
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="maitree_allowed_users" domain="[('share', '=', False)]"
+                        widget="many2many_tags" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

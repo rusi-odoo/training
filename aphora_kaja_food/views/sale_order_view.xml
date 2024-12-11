@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="aphora_sale_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="show_json_popover" column_invisible="1"/>
+                <field nolabel="1" name="json_popover" widget="stock_rescheduling_popover" invisible="not show_json_popover"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_sale_order_form_view" model="ir.ui.view">
+        <field name="name">aphora.sale.order.form.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='effective_date']" position="before">
+                <label for="aphora_commitment_date_confirmed" class="d-none"/>
+                <div name="confirm" class="o_row">
+                    <field name="aphora_commitment_date_confirmed"/>
+                    <span>Confirmed</span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_view_sales_order_filter" model="ir.ui.view">
+        <field name="name">sale.order.list.select</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <filter name="my_sale_orders_filter" position="after">
+                <filter string="Planning Issue" name="show_json_popover" domain="[('show_json_popover', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

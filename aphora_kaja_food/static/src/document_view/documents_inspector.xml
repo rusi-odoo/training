@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-inherit="documents.DocumentsInspector.documentsInfo" t-inherit-mode="extension">
+        <xpath expr="//tbody/t[@t-call='documents.DocumentsInspector.field'][last()]" position="before">
+            <t t-call="documents.DocumentsInspector.field">
+                <t t-set="fieldName" t-translation="off">aphora_validity_date</t>
+            </t>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_commission_tree_view" model="ir.ui.view">
+        <field name="name">product.commission.tree</field>
+        <field name="model">partner.product.commission</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="product_template_id"/>
+                <field name='commission'/>
+            </tree>
+        </field>
+    </record>
+    <record id="product_commission_action" model="ir.actions.act_window">
+        <field name="name">Product Commission</field>
+        <field name="res_model">partner.product.commission</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

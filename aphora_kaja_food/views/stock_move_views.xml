@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="aphora_view_stock_move_line_detailed_operation_tree_expiry" model="ir.ui.view">
+        <field name="name">aphora.view.stock.move.line.detailed.operation.tree.expiry</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="product_expiry.view_stock_move_line_detailed_operation_tree_expiry"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='expiration_date']" position="after">
+                <field name="aphora_use_date"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_view_stock_move_line_operation_tree_expiry" model="ir.ui.view">
+        <field name="name">aphora.view.stock.move.line.operation.tree.expiry</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="product_expiry.view_stock_move_line_operation_tree_expiry"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='expiration_date']" position="after">
+                <field name="aphora_use_date" column_invisible="parent.has_tracking == 'none'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

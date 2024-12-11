@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="aphora_mrp_workcenter_productivity_form_view" model="ir.ui.view">
+        <field name="name">mrp.workcenter.productivity.form</field>
+        <field name="model">mrp.workcenter.productivity</field>
+        <field name="inherit_id" ref="mrp.oee_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='loss_id']" position="after">
+                <field name="aphora_quantity_count"/>
+                <field name="aphora_worker_count"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

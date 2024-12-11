@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="aphora_stock_picking_kanban" model="ir.ui.view">
+        <field name="name">aphora.stock.picking.kanban</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.stock_picking_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_top')]" position="after">
+                <div class="o_kanban_record_body">
+                    <field name="origin" invisible="not origin"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_stock_picking_form" model="ir.ui.view">
+        <field name="name">aphora.stock.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock_delivery.view_picking_withcarrier_out_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='shipping_weight']/parent::div" position="after">
+                <label for="aphora_shipping_weight_adjusted"/>
+                <div>
+                    <field name="aphora_shipping_weight_adjusted" class="oe_inline" style="max-width: 32px"/>
+                    <field name="weight_uom_name" nolabel="1" class="oe_inline" style="margin-left: 5px;"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_view_picking_form" model="ir.ui.view">
+        <field name="name">aphora.stock.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Delivery Note" name="aphora_delivery_note" invisible="picking_type_code != 'outgoing'">
+                    <field name="aphora_delivery_note" company_dependent="1" placeholder="Add a note that will be printed on the Delivery Slip"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

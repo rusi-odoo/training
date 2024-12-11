@@ -9,6 +9,7 @@
     "website": "https://www.odoo.com",
     "category": "Customizations",
     "depends": [
+        "mcxi_dealer_code",
         "partner_commission",
         "account",
         "sale_management",
@@ -16,9 +17,9 @@
     ],
     "data": [
         "security/ir.model.access.csv",
-        "data/ir_sequence_data.xml",
         "wizard/generate_report_view.xml",
-        "views/account_views.xml",
+        "views/product_commission_view.xml",
+        "views/account_move_views.xml",
         "views/sale_order_views.xml",
         "views/res_partner_views.xml",
     ],

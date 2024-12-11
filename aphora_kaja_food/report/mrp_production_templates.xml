@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="aphora_report_mrporder" inherit_id="mrp.report_mrporder">
+        <xpath expr="//div[@t-if='o.qty_producing']" position="before">
+            <div class="col-3" t-if="o.aphora_batch_size">
+                <strong>Batch Size</strong>
+                <br/>
+                <span t-field="o.aphora_batch_size">100</span>
+            </div>
+        </xpath>
+        <xpath expr="//div[@t-if='o.move_raw_ids']" position="after">
+            <div name="aphora_legacy_master_data">
+            <br/>
+            <h4>PRODUCTION</h4>
+            <p>
+                <strong>Allergenes:</strong>
+                <span t-field="o.aphora_allergen_ids"/>
+            </p>
+            <p>
+                <strong>Production Description:</strong>
+                <span t-raw="o.aphora_description_production"/>
+            </p>
+            <p>
+                <strong>Coating Note:</strong>
+                <span t-field="o.aphora_coating_note"/>
+            </p>
+            <p>
+                <strong>Shipping Note:</strong>
+                <span t-field="o.aphora_shipping_note"/>
+            </p>
+            <p>
+                <strong>Tray Label:</strong>
+                <span t-raw="o.aphora_tray_label"/>
+            </p>
+            <p>
+                <strong>Nomenclature:</strong>
+                <span t-field="o.aphora_lot_nomenclature"/>
+            </p>
+            <br/>
+            <h4>QUALITY</h4>
+            <p>
+                <strong>Retention Sample:</strong>
+                <span t-field="o.aphora_retention_sample"/>
+            </p>
+            <p>
+                <strong>Best Before Date (Production):</strong>
+                <span t-field="o.aphora_best_before_date_production"/>
+            </p>
+            <p>
+                <strong>Best Before Date (Customer):</strong>
+                <span t-field="o.aphora_best_before_date_customer"/>
+            </p>
+            <p>
+                <strong>Best Before Date (Product Sheet):</strong>
+                <span t-field="o.aphora_best_before_date_sheet"/>
+            </p>
+            <p>
+                <strong>Remaining Term (Customer):</strong>
+                <span t-field="o.aphora_residual_term_customer"/>
+            </p>
+            <p>
+                <strong>Activity of Water:</strong>
+                <span t-field="o.aphora_actitivity_of_water"/>
+            </p>
+            <p>
+                <strong>Quality Control:</strong>
+                <span t-raw="o.aphora_description_quality"/>
+            </p>
+            <p>
+                <strong>Weight Control:</strong>
+                <span t-raw="o.aphora_weight_check"/>
+            </p>
+            <br/>
+            <h4>INVENTORY</h4>
+            <p>
+                <strong>Units/Tray:</strong>
+                <span t-field="o.aphora_units_per_tray"/>
+            </p>
+            <p>
+                <strong>Trays/Layer:</strong>
+                <span t-field="o.aphora_trays_per_layer"/>
+            </p>
+            <p>
+                <strong>Layers/Pallet:</strong>
+                <span t-field="o.aphora_layers_per_pallet"/>
+            </p>
+            <p>
+                <strong>Adjusted Weight:</strong>
+                <span t-field="o.aphora_weight_adjusted" t-options='{"widget": "float", "precision": 2}'></span>
+                <span class="flex-grow-1">g</span>
+            </p>
+            </div>
+        </xpath>
+        <xpath expr="//div[@name='aphora_legacy_master_data']" position="after">
+            <div class="oe_structure"></div>
+            <p t-field="o.aphora_note"/>
+            <div class="oe_structure"></div>
+        </xpath>
+    </template>
+
+    <template id="aphora_report_mrp_production_components" inherit_id="mrp.report_mrp_production_components">
+        <xpath expr="//thead//tr//th[@t-if='has_product_barcode']" position="before">
+            <th t-attf-class="text-end" t-if="has_aphora_batch_size">By Batch</th>
+        </xpath>
+        <xpath expr="//table//t[@t-set='has_product_barcode']" position="after">
+            <t t-set="has_aphora_batch_size" t-value="o.aphora_batch_size"/>
+        </xpath>
+        <xpath expr="//thead//tr//th[1]" position="after">
+            <th t-attf-class="text-center" t-if="o.aphora_has_kits">Kit</th>
+        </xpath>
+
+        <xpath expr="//table//tbody/tr//td[3]" position="after">
+            <td t-attf-class="text-end" t-if="raw_line.aphora_batch_uom_qty">
+                <span t-field="raw_line.aphora_batch_uom_qty"/>
+            </td>
+        </xpath>
+        <xpath expr="//table//tbody/tr/td[1]" position="after">
+            <td t-if="o.aphora_has_kits">
+                <span t-field="raw_line.description_bom_line"></span>
+            </td>
+        </xpath>
+    </template>
+</odoo>

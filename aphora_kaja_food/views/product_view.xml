@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_product_property_tree" model="ir.actions.act_window">
+            <field name="name">Product Properties</field>
+            <field name="res_model">aphora.product.property</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="action_aphora_product_allergenes" model="ir.actions.act_window">
+            <field name="name">Product Allergenes</field>
+            <field name="res_model">aphora.product.allergen</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="action_aphora_product_trace" model="ir.actions.act_window">
+            <field name="name">Product Traces</field>
+            <field name="res_model">aphora.product.trace</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="action_aphora_product_pack_type" model="ir.actions.act_window">
+            <field name="name">Packaging Types</field>
+            <field name="res_model">aphora.product.pack_type</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="action_aphora_product_group_tree" model="ir.actions.act_window">
+            <field name="name">Product Groups</field>
+            <field name="res_model">aphora.product.group</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="aphora_product_category" name="Product Properties" parent="stock.menu_product_in_config_stock" sequence="60" action="action_product_property_tree"/>
+        <menuitem id="aphora_product_allergences" name="Product Allergenes" parent="stock.menu_product_in_config_stock" sequence="70" action="action_aphora_product_allergenes"/>
+        <menuitem id="aphora_product_trace" name="Product Traces" parent="stock.menu_product_in_config_stock" sequence="80" action="action_aphora_product_trace"/>
+        <menuitem id="aphora_product_pack_type" name="Packaging Types" parent="stock.menu_product_in_config_stock" sequence="90" action="action_aphora_product_pack_type"/>
+        <menuitem id="aphora_product_group" name="Product Groups" parent="stock.menu_product_in_config_stock" sequence="3" action="action_aphora_product_group_tree"/>
+        <menuitem id="aphora_account_product_group" name="Product Groups" parent="account.account_management_menu" sequence="4" action="action_aphora_product_group_tree"/>
+
+        <record id="aphora_kaja_legacy_product_template_view" model="ir.ui.view">
+            <field name="name">aphora.kaja.legacy.product.template.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Legacy" name="aphora_kaja_legacy">
+                        <group>
+                            <group>
+                                <field name="aphora_group_id"/>
+                                <field name="aphora_is_approved"/>
+                                <field name="aphora_is_bio"/>
+                                <field name="aphora_is_consignment"/>
+                                <field name="aphora_owner" invisible="not aphora_is_consignment"/>
+                                <field name="aphora_has_coating"/>
+                                <field name="aphora_coating_note" invisible="not aphora_has_coating"/>
+                                <field name="aphora_surplus_quantity"/>
+                                <!-- TODO: UTAG check for condition initailly gives error for groups -->
+                                <field name="aphora_lot_nomenclature"/>
+                                <field name="aphora_best_before_date_production"/>
+                                <field name="aphora_retention_sample"/>
+                                <field name="aphora_storage_info"/>
+                                <field name="aphora_ccp"/>
+                                <field name="aphora_property_ids" widget="many2many_tags"/>
+                                <field name="aphora_weight_check"/>
+                                <field name="aphora_actitivity_of_water"/>
+                                <field name="aphora_residual_term_customer"/>
+                                <field name="aphora_best_before_date_customer"/>
+                                <field name="aphora_best_before_date_sheet"/>
+                                <field name="aphora_product_ean"/>
+                                <field name="aphora_tray_ean"/>
+                                <field name="aphora_package_ean"/>
+                            </group>
+                            <group>
+                                <field name="aphora_customer_code"/>
+                                <field name="aphora_customer_tray_code"/>
+                                <field name="aphora_units_per_tray"/>
+                                <field name="aphora_trays_per_layer"/>
+                                <field name="aphora_layers_per_pallet"/>
+                                <field name="aphora_allergen_ids" widget="many2many_tags"/>
+                                <field name="aphora_trace_ids" widget="many2many_tags"/>
+                                <field name="aphora_billing_dual_system" widget="radio" options="{'horizontal': True}"/>
+                                <label for="aphora_filling_weight"/>
+                                <div class="o_row">
+                                    <field name="aphora_filling_weight" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_weight_adjusted"/>
+                                <div class="o_row">
+                                    <field name="aphora_weight_adjusted" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <field name="aphora_pack_type_1_id"/>
+                                <field name="aphora_pack_type_2_id"/>
+                                <field name="aphora_pack_type_3_id"/>
+                                <field name="aphora_approver_development"/>
+                                <field name="aphora_appearance"/>
+                                <field name="aphora_taste"/>
+                                <field name="aphora_consistency"/>
+                                <field name="aphora_color"/>
+                                <field name="aphora_smell"/>
+                                <field name="aphora_size_shape"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="aphora_energy_kj"/>
+                                <field name="aphora_energy_kcal"/>
+                                <label for="aphora_fat_level"/>
+                                <div class="o_row">
+                                    <field name="aphora_fat_level" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_fat_level_satured"/>
+                                <div class="o_row">
+                                    <field name="aphora_fat_level_satured" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_carbohydrates_level"/>
+                                <div class="o_row">
+                                    <field name="aphora_carbohydrates_level" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_sugar_level"/>
+                                <div class="o_row">
+                                    <field name="aphora_sugar_level" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_protein_level"/>
+                                <div class="o_row">
+                                    <field name="aphora_protein_level" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_salt_level"/>
+                                <div class="o_row">
+                                    <field name="aphora_salt_level" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_fiber_level"/>
+                                <div class="o_row">
+                                    <field name="aphora_fiber_level" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_poly_alc"/>
+                                <div class="o_row">
+                                    <field name="aphora_poly_alc" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                                <label for="aphora_poly_alc_erithritol"/>
+                                <div class="o_row">
+                                    <field name="aphora_poly_alc_erithritol" class="oe_inline"/>
+                                    <span class="flex-grow-1">g</span>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="aphora_nutritional_values_source"/>
+                                <field name="aphora_gmo_2"/>
+                                <field name="aphora_ionizing_radiation_2"/>
+                                <field name="aphora_additives_2"/>
+                                <field name="aphora_needs_quality_check"/>
+                                <field name="aphora_needs_certificate"/>
+                                <field name="aphora_raw_materials_info_source"/>
+                                <field name="aphora_creator"/>
+                                <field name="aphora_approver"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="aphora_warning_note_2"/>
+                                <field name="aphora_shipping_note"/>
+                                <field name="aphora_description_extra"/>
+                                <field name="aphora_description_mibi"/>
+                                <field name="aphora_description_quality"/>
+                                <field name="aphora_description_internal"/>
+                            </group>
+                            <group>
+                                <field name="aphora_description_long"/>
+                                <field name="aphora_tray_label"/>
+                                <field name="aphora_lmiv_name"/>
+                                <field name="aphora_ingredients"/>
+                                <field name="aphora_description_production"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

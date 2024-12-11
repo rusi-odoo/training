@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="aphora_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">aphora.res.config.settings.view.form.inherit.stock</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//block[@name='shipping_setting_container']" position="inside">
+                    <setting id="aphora_delivery_note" company_dependent="1">
+                        <field name="aphora_delivery_note" placeholder="Add a default note to deliveries"/>
+                    </setting>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

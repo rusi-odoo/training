@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="purchaseorder_report_inherit_aphora_kaja_food" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//span[@t-field='line.product_qty']" position="attributes">
+            <attribute name="t-options">{"widget": "float", "precision": 2}</attribute>
+        </xpath>
+    </template>
+
+    <template id="purchasequotation_report_inherit_aphora_kaja_food" inherit_id="purchase.report_purchasequotation_document">
+        <xpath expr="//span[@t-field='order_line.product_qty']" position="attributes">
+            <attribute name="t-options">{"widget": "float", "precision": 2}</attribute>
+        </xpath>
+    </template>
+</odoo>

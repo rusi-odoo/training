@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="aphora_product_property_tree" model="ir.ui.view">
+        <field name="name">aphora.product.property.tree</field>
+        <field name="model">aphora.product.property</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Product Properties">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="aphora_product_allergen_tree" model="ir.ui.view">
+        <field name="name">aphora.product.allergen.tree</field>
+        <field name="model">aphora.product.allergen</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Product Properties">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="aphora_product_trace_tree" model="ir.ui.view">
+        <field name="name">aphora.product.trace.tree</field>
+        <field name="model">aphora.product.trace</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Product Allergen">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="aphora_product_pack_type_tree" model="ir.ui.view">
+        <field name="name">aphora.product.pack_type.tree</field>
+        <field name="model">aphora.product.pack_type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Product Allergen">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="aphora_product_group_tree" model="ir.ui.view">
+        <field name="name">aphora.product.group.tree</field>
+        <field name="model">aphora.product.group</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Product Groups">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

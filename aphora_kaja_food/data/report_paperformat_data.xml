@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="aphora_paperformat_label_sheet_8x8" model="report.paperformat">
+        <field name="name">8x8 Label Sheet</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">80</field>
+        <field name="page_width">80</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">4</field>
+        <field name="margin_bottom">4</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+    <!-- Set PaperFormat to report -->
+    <record id="action_aphora_report_lot_label8x8" model="ir.actions.report">
+        <field name="name">Lot/Serial Number 8x8 (PDF)</field>
+        <field name="model">stock.lot</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock.report_lot_label</field>
+        <field name="report_file">stock.report_lot_label</field>
+        <field name="paperformat_id" ref="aphora_kaja_food.aphora_paperformat_label_sheet_8x8"/>
+        <field name="print_report_name">'Lot-Serial - %s' % object.name</field>
+        <field name="binding_model_id"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

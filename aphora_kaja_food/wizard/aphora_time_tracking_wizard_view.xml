@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="aphora_time_tracking_wizard_form" model="ir.ui.view">
+        <field name="name">quantity.report.wizard.form</field>
+        <field name="model">aphora.time.tracking.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Time Tracking">
+                <group>
+                    <field name="aphora_employee_id" />
+                    <field name="aphora_quantity" />
+                    <field name="aphora_worker" />
+                </group>
+                <footer>
+                    <button name="action_confirm" string="Confirm" type="object"
+                        class="btn-primary" data-hotkey="q" />
+                    <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="x" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

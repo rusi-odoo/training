@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="aphora_view_mrp_work_order_calendar" model="ir.ui.view">
+        <field name="name">aphora.mrp.production.work.order.calendar</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.workcenter_line_calendar"/>
+        <field name="arch" type="xml">
+            <xpath expr="//calendar//field[@name='workcenter_id']" position="before">
+                <field name="product_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_mrp_workorder_view_gantt" model="ir.ui.view">
+        <field name="name">aphora.mrp.workorder.view.gantt</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_workorder_view_gantt"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_start']" position="before">
+                <field name="product_id"/>
+            </xpath>
+            <xpath expr="//div[@t-name='gantt-popover']//ul[@class='ps-1 mb-0 list-unstyled']//li" position="before">
+                <li><strong>Product: </strong><t t-esc="product_id[1]"/></li>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_workcenter_line_gantt_production" model="ir.ui.view">
+        <field name="name">aphora.mrp.production.work.order.gantt.production</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.workcenter_line_gantt_production"/>
+        <field name="arch" type="xml">
+            <xpath expr="//gantt//field[@name='date_start']" position="before">
+                <field name="product_id"/>
+            </xpath>
+            <xpath expr="//div[@t-name='gantt-popover']//ul[@class='ps-1 mb-0 list-unstyled']//li" position="before">
+                <li><strong>Product: </strong><t t-esc="product_id[1]"/></li>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="aphora_mrp_workorder_view_tree" model="ir.ui.view">
+        <field name="name">aphora.mrp.workorder.tree.inherit</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_editable_view"/>
+        <field name="arch" type="xml">
+            <button name="action_open_wizard" position="before">
+                <button name="button_scrap" type="object" string="Scrap"/>
+                <button name="button_quality_alert" type="object" string="Quallity Alert"/>
+                <button name="button_maintenance_req" type="object" string="Request Maintenance"/>
+            </button>
+        </field>
+    </record>
+
+    <record id="aphora_mrp_workorder_view_form" model="ir.ui.view">
+        <field name="name">aphora.mrp.workorder.form.inherit</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='time_tracking']/field[@name='time_ids']/tree/field[@name='duration']" position="before">
+                <field name="aphora_quantity_count" />
+                <field name="aphora_worker_count"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

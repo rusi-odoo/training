@@ -6,12 +6,20 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='vat']" position="after">
-                <field name="contact_type" widget="radio"/>
                 <field name="sales_channel" widget="radio" options="{'horizontal': true}"/>
-                <field name="dealer_code"/>             
+                <field name="account_type"/>
+                <field name="agent_ids" widget='many2many_tags'/>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']/group[@name='container_row_2']/group[@name='sale']/field[@name='user_id']" position="before">
+                <field name="account_owner_id"/>
+                <field name="is_account_commission"/>
+                <field name="dsm_id"/>
+                <field name="is_dsm_commission"/>
+                <field name="bdm_id"/>
+                <field name="is_bdm_commission"/>
             </xpath>
             <xpath expr="//notebook[last()]" position="inside">
-                <page string="PRICING / INCENTIVES" name="pricing_incentives">
+                <page string="PRICING / INCENTIVES" name="pricing_incentives" invisible="contact_type != 'customer'">
                     <group>
                         <group name="mcxi_pricing">
                             <field name="commission_rate"/>
@@ -22,9 +30,9 @@
                         </group>
                     </group>
                 </page>
-            </xpath>
-            <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='team_id']" position="after">
-                <field name="dsm_id"/>   
+                <page string="PRODUCT &amp; COMMISSION" name="pricing_incentives" invisible="contact_type != 'customer'">
+                    <field name="product_commission_ids"/>
+                </page>
             </xpath>
         </field>
     </record>

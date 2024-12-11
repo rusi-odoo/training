@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit_aphora_kaja_food" inherit_id="account.report_invoice_document">
+        <xpath expr="//td[@name='td_quantity']/span[@t-field='line.quantity']" position="attributes">
+            <attribute name="t-options">{"widget": "float", "precision": 2}</attribute>
+        </xpath>
+    </template>
+</odoo>

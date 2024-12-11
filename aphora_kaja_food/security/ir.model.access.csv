@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_aphora_time_tracking_wizard,aphora.time.tracking.wizard,model_aphora_time_tracking_wizard,,1,1,1,1
+access_aphora_product_group,aphora.product.group,model_aphora_product_group,,1,1,1,1
+access_aphora_product_property,aphora.product.property,model_aphora_product_property,,1,1,1,1
+access_aphora_product_allergen,aphora.product.allergen,model_aphora_product_allergen,,1,1,1,1
+access_aphora_product_trace,aphora.product.trace,model_aphora_product_trace,,1,1,1,1
+access_aphora_product_pack_type,aphora.product.pack_type,model_aphora_product_pack_type,,1,1,1,1

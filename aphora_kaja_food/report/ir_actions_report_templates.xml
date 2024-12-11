@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='informations_date']" position="after">
+            <div t-if="doc.commitment_date and doc.aphora_commitment_date_confirmed and doc.state not in ['draft', 'sent']" class="col-auto col-3 mw-100 mb-2" name="commitment_date">
+                <strong>Delivery Date:</strong><br/>
+                <span class="m-0" t-field="doc.commitment_date" t-options='{"widget": "date"}'>2023-12-31</span>
+            </div>
+        </xpath>
+        <xpath expr="//td[@name='td_quantity']/span[@t-field='line.product_uom_qty']" position="attributes">
+            <attribute name="t-options">{"widget": "float", "precision": 2}</attribute>
+        </xpath>
+    </template>
+</odoo>
